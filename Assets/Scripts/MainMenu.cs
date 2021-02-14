@@ -71,10 +71,10 @@ public class MainMenu : MonoBehaviour
 				if (tag == "Lock1" && stars >= 200) {
 						renderer.enabled = false;
 				}
-				if (tag == "Lock2" && stars >= 500) {
+				if (tag == "Lock2" && stars >= 700) {
 						renderer.enabled = false;
 				}
-				if (tag == "Lock3" && stars >= 1000) {
+				if (tag == "Lock3" && stars >= 2000) {
 						renderer.enabled = false;
 				}
 

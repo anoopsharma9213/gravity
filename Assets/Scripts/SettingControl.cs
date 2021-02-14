@@ -161,6 +161,9 @@ public class SettingControl : MonoBehaviour
 						if (Application.platform == RuntimePlatform.WP8Player) {
 								Application.OpenURL ("zune:reviewapp?appid=2838d93d-4811-49c8-933d-7debe523e8af");
 						}
+						else if (Application.platform == RuntimePlatform.Android) {
+								Application.OpenURL ("market://details?id=com.RampageStudios.Gravity1_0");
+						}
 				} else if (name == "about" && showTray == true) {
 						GameObject.FindGameObjectWithTag ("SoundCamera").GetComponent<SoundPlay> ().sound_play (click);
 						GameObject.FindGameObjectWithTag ("Menu").transform.position = new Vector3 (0, 60, 0);
@@ -187,13 +190,13 @@ public class SettingControl : MonoBehaviour
 						PlayerPrefs.SetInt ("Level", MainMenu.level);
 						PlayerPrefs.SetString ("Resume", "false");
 						Application.LoadLevel ("Level_" + MainMenu.level);
-				} else if (name == "Stage3" && MainMenu.stars >= 500) {
+				} else if (name == "Stage3" && MainMenu.stars >= 700) {
 						GameObject.FindGameObjectWithTag ("SoundCamera").GetComponent<SoundPlay> ().sound_play (click);
 						MainMenu.level = 3;
 						PlayerPrefs.SetInt ("Level", MainMenu.level);
 						PlayerPrefs.SetString ("Resume", "false");
 						Application.LoadLevel ("Level_" + MainMenu.level);
-				} else if (name == "Stage4" && MainMenu.stars >= 1000) {
+				} else if (name == "Stage4" && MainMenu.stars >= 2000) {
 						GameObject.FindGameObjectWithTag ("SoundCamera").GetComponent<SoundPlay> ().sound_play (click);
 						MainMenu.level = 4;
 						PlayerPrefs.SetInt ("Level", MainMenu.level);

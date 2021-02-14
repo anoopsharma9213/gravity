@@ -50,7 +50,7 @@ public class BlockMovement : MonoBehaviour
 								} else {
 										prob = 30;
 								}
-								if ((spike_num < 2 && LevelSetup.bspeed <= 3.0f) || (spike_num < 1 && LevelSetup.bspeed > 3.0f && LevelSetup.bspeed < 6.5f)) {
+								if ((spike_num < 2 && LevelSetup.bspeed <= 5.0f) || (spike_num < 1 && LevelSetup.bspeed > 3.0f)) {
 										if (Random.Range (0, 100) < prob) {
 												isspike = true;
 										}

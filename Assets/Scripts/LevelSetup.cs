@@ -5,7 +5,7 @@ public class LevelSetup : MonoBehaviour
 {
 
 		public static float bspeed;
-		public static bool gameOver , application_pause;
+		public static bool gameOver, application_pause;
 		public static int scores, lives, stars;
 
 		// Use this for initialization
@@ -110,12 +110,14 @@ public class LevelSetup : MonoBehaviour
 		{
 				if (gameOver == false && application_pause == false) {
 						if (gameObject.CompareTag ("Block1")) {
-								if (bspeed > 5.0f && bspeed < 8.0f) {
+								if (bspeed > 8.0f && bspeed < 15.0f) {
 										bspeed += 0.0001f;
-								} else if (bspeed > 3.0f) {
+								} else if (bspeed > 5.0f && bspeed <= 8.0f) {
 										bspeed += 0.0005f;
-								} else {
-										bspeed += 0.001f;
+								} else if (bspeed > 3.0f && bspeed <= 5.0f) {
+										bspeed += 0.005f;
+								} else if (bspeed <= 3.0f) {
+										bspeed += 0.01f;
 								}
 						}
 						if (Input.GetKeyDown (KeyCode.Escape) && gameObject.tag == "Player") {
@@ -173,7 +175,8 @@ public class LevelSetup : MonoBehaviour
 				}
 		}
 		
-		void OnApplicationPause(){
+		void OnApplicationPause ()
+		{
 				application_pause = true;
 		}
 }

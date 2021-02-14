@@ -10,7 +10,7 @@ public class AdMobPluginDemoScript : MonoBehaviour {
                                      AdMobPlugin.AdSize.Banner,
                                      true);
         print("Created Banner View");
-        AdMobPlugin.RequestBannerAd(true);
+        AdMobPlugin.RequestBannerAd(false);
         print("Requested Banner Ad");
     }
 
